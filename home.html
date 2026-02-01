@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jujutsu Kaisen Store - Home</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* { margin:0; padding:0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #120018, #050008);
+    color: #eae6f5;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    background: rgba(5,0,8,.95);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 15px 25px;
+    z-index: 20;
+    border-bottom: 1px solid rgba(123,63,228,.3);
+}
+
+nav .logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    color: #d8c7ff;
+    text-shadow: 0 0 12px rgba(75,28,107,.6);
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('https://wallpapercave.com/wp/wp10524572.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::after {
+    content: '';
+    position: absolute; inset:0;
+    background: linear-gradient(to bottom, rgba(5,0,8,.3), rgba(5,0,8,.9));
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    background: rgba(0,0,0,.4);
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    color: #d8c7ff;
+    text-shadow: 0 0 12px rgba(123,63,228,.6);
+}
+
+.hero-content p {
+    margin: 10px 0 20px;
+    letter-spacing: 2px;
+    color: #b9a7ff;
+}
+
+.hero-content .btn-products {
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #3a0ca3, #4b1c6b);
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 0 18px rgba(75,28,107,.8);
+    transition: .3s;
+    text-decoration: none;
+}
+
+.hero-content .btn-products:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(123,63,228,.8);
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">JJK STORE</div>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+        <h1>Jujutsu Kaisen Store</h1>
+        <p>Exclusive cursed items for true sorcerers</p>
+        <a href="products.html" class="btn-products">See Products</a>
+    </div>
+</header>
+
+</body>
+</html>
