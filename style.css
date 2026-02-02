@@ -46,19 +46,75 @@ nav ul a:hover {
 
 /* HERO */
 .hero {
+  position: relative;
   text-align: center;
-  padding: 90px 20px;
+  padding: 140px 20px;
+  overflow: hidden;
+  color: #fff;
+
+  /* LAYER 1: GRADIENT ANIMATED */
+  background:
+    linear-gradient(
+      -45deg,
+      #000000,
+      #1a1a1a,
+      #2b2b2b,
+      #000000
+    );
+  background-size: 400% 400%;
+  animation: gradientMove 14s ease infinite;
 }
 
+/* LAYER 2: GAMBAR + OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("hero-bg.jpg") center/cover no-repeat;
+  filter: grayscale(100%) contrast(115%);
+  z-index: 0;
+}
+
+/* LAYER 3: DOT / NOISE PATTERN */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.35;
+  z-index: 1;
+}
+
+/* ISI HERO DI ATAS SEMUA LAYER */
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 2;
+}
+
+/* TEKS LEBIH HIDUP */
 .hero h1 {
   font-size: 2.6em;
   letter-spacing: 4px;
+  text-shadow: 0 0 25px rgba(255,255,255,0.18);
 }
 
 .hero p {
-  color: #aaa;
-  margin-top: 10px;
+  margin-top: 12px;
+  color: #ccc;
 }
+
+/* ANIMASI GRADIENT */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 /* STORE */
 .store {
