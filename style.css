@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 html {
@@ -10,61 +10,57 @@ html {
 }
 
 body {
-  background: url('osagiri-bg.jpg') center/cover fixed;
-  color: white;
-}
-
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(30,0,40,0.65);
-  z-index: -1;
+  background: #0f0f0f;
+  color: #f5f5f5;
 }
 
 /* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 15px 25px;
-  position: sticky;
-  top: 0;
-  background: rgba(30,0,40,0.7);
-  backdrop-filter: blur(10px);
+  align-items: center;
+  padding: 16px 30px;
+  border-bottom: 1px solid #222;
 }
 
-nav .logo {
-  font-weight: bold;
-  color: #ffb7e0;
+.logo {
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 
 nav ul {
   display: flex;
-  gap: 15px;
   list-style: none;
+  gap: 20px;
 }
 
 nav ul a {
-  color: white;
   text-decoration: none;
+  color: #aaa;
   font-size: 14px;
 }
 
 nav ul a:hover {
-  color: #ffb7e0;
+  color: #fff;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 90px 20px;
 }
 
 .hero h1 {
-  color: #ffd6f0;
-  font-size: 2.5em;
+  font-size: 2.6em;
+  letter-spacing: 4px;
 }
 
-/* PRODUK */
+.hero p {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* STORE */
 .store {
   display: flex;
   justify-content: center;
@@ -72,24 +68,30 @@ nav ul a:hover {
 }
 
 .card {
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(10px);
+  background: #151515;
+  width: 300px;
   padding: 20px;
-  width: 280px;
-  border-radius: 20px;
+  border-radius: 14px;
+  border: 1px solid #222;
   text-align: center;
-  box-shadow: 0 0 25px rgba(255,183,224,0.4);
 }
 
 .card img {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
+  filter: grayscale(100%);
+}
+
+.card h2 {
+  margin-top: 15px;
 }
 
 .price {
+  color: #bbb;
   margin: 10px 0;
 }
 
+/* BUTTON */
 .btn-group {
   display: flex;
   flex-direction: column;
@@ -97,29 +99,37 @@ nav ul a:hover {
 }
 
 button {
-  padding: 10px;
-  border-radius: 25px;
+  padding: 12px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
-  color: white;
-  background: linear-gradient(135deg, #ff7ac8, #b36bff);
+  background: #fff;
+  color: #000;
+  font-weight: 500;
 }
 
-.fav {
-  background: linear-gradient(135deg, #ff5fa2, #ff9ad5);
+button:hover {
+  opacity: 0.85;
+}
+
+button.outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #555;
 }
 
 /* INFO */
 .info {
   max-width: 600px;
-  margin: 60px auto;
+  margin: 70px auto;
   padding: 25px;
-  background: rgba(255,255,255,0.12);
-  border-radius: 20px;
+  background: #151515;
+  border-radius: 14px;
+  border: 1px solid #222;
 }
 
 .info h2 {
-  color: #ffd6f0;
+  margin-bottom: 10px;
 }
 
 /* MODAL */
@@ -127,15 +137,15 @@ button {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.8);
 }
 
 .modal-box {
-  background: #1c0f2e;
+  background: #111;
   width: 300px;
   margin: 20% auto;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 12px;
   text-align: center;
 }
 
@@ -145,34 +155,24 @@ button {
 }
 
 .close {
-  cursor: pointer;
   float: right;
+  cursor: pointer;
 }
 
 /* FLOATING BUTTON */
 .float {
   position: fixed;
   right: 20px;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  color: white;
-  font-size: 20px;
+  background: #fff;
+  color: #000;
   border: none;
+  font-weight: bold;
 }
 
-.chat { bottom: 140px; background: #25D366; }
-.top { bottom: 80px; background: #b36bff; }
-.mode { bottom: 20px; background: #ff7ac8; }
-
-/* LIGHT MODE */
-body.light {
-  background: #fff0f8;
-  color: #333;
-}
-body.light .card,
-body.light .info {
-  background: rgba(255,255,255,0.9);
-}
+.chat { bottom: 80px; }
+.top { bottom: 20px; }
