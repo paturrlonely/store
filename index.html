@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Osagiri Store | QRIS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">🌸 Osagiri</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#produk">Produk</a></li>
+    <li><a href="#cara">Cara Bayar</a></li>
+    <li><a href="#tentang">Tentang</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="hero">
+  <h1>Osagiri Anime Store</h1>
+  <p>Pembayaran QRIS • Cepat • Aman</p>
+</section>
+
+<!-- PRODUK -->
+<section id="produk" class="store">
+  <div class="card">
+    <img src="osagiri.png" alt="Osagiri">
+    <h2>Osagiri Premium Pack</h2>
+    <p class="price">Rp 50.000</p>
+
+    <div class="btn-group">
+      <button onclick="openQR()">💳 Bayar QRIS</button>
+      <button onclick="addCart()">🛒 Keranjang</button>
+      <button class="fav" onclick="favorite()">❤️ Favorit</button>
+    </div>
+  </div>
+</section>
+
+<!-- CARA BAYAR -->
+<section id="cara" class="info">
+  <h2>💳 Cara Pembayaran</h2>
+  <ol>
+    <li>Pilih produk</li>
+    <li>Klik <b>Bayar QRIS</b></li>
+    <li>Scan QR dengan e-wallet</li>
+    <li>Selesai</li>
+  </ol>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang" class="info">
+  <h2>🌸 Tentang Osagiri</h2>
+  <p>
+    Osagiri Store adalah web store bertema anime
+    yang menyediakan produk digital & premium
+    dengan metode pembayaran QRIS.
+  </p>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak" class="info">
+  <h2>📞 Kontak</h2>
+  <p>WhatsApp: 08xxxxxxxx</p>
+  <p>Instagram: @osagiristore</p>
+</section>
+
+<!-- MODAL QRIS -->
+<div class="modal" id="qrisModal">
+  <div class="modal-box">
+    <span class="close" onclick="closeQR()">✖</span>
+    <h2>Scan QRIS</h2>
+    <img src="qris.png" class="qris">
+    <p>GoPay • OVO • DANA • ShopeePay</p>
+  </div>
+</div>
+
+<!-- FLOATING BUTTON -->
+<a href="https://wa.me/628xxxxxxxxxx" class="float chat" target="_blank">💬</a>
+<button class="float top" onclick="scrollTopPage()">⬆️</button>
+<button class="float mode" onclick="toggleMode()">🌙</button>
+
+<script src="script.js"></script>
+</body>
+</html>
